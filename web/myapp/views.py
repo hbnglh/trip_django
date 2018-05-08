@@ -53,6 +53,7 @@ def airplane(date, flight_number):
     every.append(third)
     every.append(fourth)
     print(every)
+    every_all.append(every)
     '''
     db = pymysql.connect('101.236.24.202', 'root', 'oracle', 'trip', use_unicode=True, charset="utf8")
     cursor = db.cursor()
@@ -151,10 +152,10 @@ def index(request):
 
 
     aaa = '../static/{}.jpg'.format(name_time)
-    return render(request,'index.html',{'aaa':aaa})
+    return render(request , 'index.html' ,{'aaa' : aaa})
 def hello(request):
-    if request.method=='POST':
-        num= request.POST['text']
+    if request.method == 'POST':
+        num = request.POST['text']
         name=request.POST['password']
         code=request.POST['capcha']
         #print(num,name,code)
@@ -188,6 +189,8 @@ def hello(request):
             # print (info_1)#欢迎信息
 
             info_2 = need1.find('div', class_='trip-table-box').find('table', class_='trip-table').find_all('tr')
+            global every_all
+            every_all=[]
             for y in info_2:
                 global every,first,fourth,third,time
                 every = []
@@ -201,7 +204,15 @@ def hello(request):
                 flight_number = third
                 # print(first,second,third,fourth,date,flight_number)
                 airplane(date, flight_number)
+            bbb=every_all#所有的航段
+            xvhao_list = []
+            for i in range(0,len(bbb)):
+                xvhao_list.append(str(i))
 
+
+            bbb_new=dict(zip(xvhao_list,bbb))
+            print(bbb_new)
+            return render(request , 'hello.html' ,{'bbb':bbb})
 
         except:
             if '抱歉' in str(soup):
@@ -212,7 +223,7 @@ def hello(request):
                 print('电子票号或姓名不正确')
 
 
-        return HttpResponse('后台拿到数据')
+            return HttpResponse('跳到异常处理')
     elif request.method=='GET':
         pass
 

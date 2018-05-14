@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
 # Create your views here.
 import requests
 #import execjs
@@ -155,10 +156,10 @@ def index(request):
     return render(request , 'index.html' ,{'aaa' : aaa})
 def hello(request):
     if request.method == 'POST':
-        num = request.POST['text']
-        name=request.POST['password']
+        num = ticket_no
+        name=ticket_name
         code=request.POST['capcha']
-        #print(num,name,code)
+        print(num,name,code)
 
         url = 'http://www.travelsky.com/tsky/validate'
         headers = {'Accept-Language': 'zh-CN,zh;q=0.9',
@@ -226,5 +227,15 @@ def hello(request):
             return HttpResponse('跳到异常处理')
     elif request.method=='GET':
         pass
+def api(request):
+    global order_id,ticket_name,ticket_no
+    if request.method == 'POST':
+        order_id = request.POST['order_id']
+        ticket_no = request.POST['ticket_no']
+        ticket_name = request.POST['ticket_name']
+        print (order_id,ticket_no,ticket_name)
+        return HttpResponse('OK')
+    elif request.method == 'GET':
+        print ('404')
 
 

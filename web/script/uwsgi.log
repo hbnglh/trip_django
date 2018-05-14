@@ -1,0 +1,213 @@
+*** Starting uWSGI 2.0.17 (64bit) on [Fri May 11 16:54:48 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 May 2018 14:41:18
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: VM_35_104_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /liusc/trip_share/web/script
+writing pidfile to /liusc/trip_share/web/script/uwsgi.pid
+detected binary path: /root/.pyenv/versions/3.6.3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /liusc/trip_share/web
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 3
+uwsgi socket 1 bound to UNIX address /liusc/trip_share/web/script/uwsgi.sock fd 4
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.3 (default, Apr 20 2018, 17:00:22)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+Python main interpreter initialized at 0xedb7e0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xedb7e0 pid: 4149 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 4149)
+spawned uWSGI worker 1 (pid: 4151, cores: 1)
+spawned uWSGI worker 2 (pid: 4152, cores: 1)
+spawned uWSGI worker 3 (pid: 4153, cores: 1)
+spawned uWSGI worker 4 (pid: 4154, cores: 1)
+spawned uWSGI worker 5 (pid: 4155, cores: 1)
+[pid: 4155|app: 0|req: 1/1] 182.50.115.131 () {48 vars in 846 bytes} [Fri May 11 08:55:07 2018] GET / => generated 4184 bytes in 255 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 4152|app: 0|req: 1/2] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 08:55:10 2018] GET / => generated 4184 bytes in 245 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 4153|app: 0|req: 1/3] 182.50.115.131 () {58 vars in 1090 bytes} [Fri May 11 09:00:18 2018] POST /hello/ => generated 27 bytes in 149 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 4154|app: 0|req: 1/4] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:00:36 2018] GET / => generated 4184 bytes in 236 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 4151|app: 0|req: 1/5] 182.50.115.131 () {58 vars in 1090 bytes} [Fri May 11 09:00:50 2018] POST /hello/ => generated 27 bytes in 153 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 4155|app: 0|req: 2/6] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:02:09 2018] GET / => generated 4184 bytes in 112 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 4152|app: 0|req: 2/7] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:02:11 2018] GET / => generated 4184 bytes in 103 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 4153|app: 0|req: 2/8] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:02:43 2018] GET / => generated 4184 bytes in 103 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 4154|app: 0|req: 2/9] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:02:45 2018] GET / => generated 4184 bytes in 104 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 4151|app: 0|req: 2/10] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:02:51 2018] GET / => generated 4184 bytes in 103 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Fri May 11 17:04:51 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 May 2018 14:41:18
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: VM_35_104_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /liusc/trip_share/web/script
+writing pidfile to /liusc/trip_share/web/script/uwsgi.pid
+detected binary path: /root/.pyenv/versions/3.6.3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /liusc/trip_share/web
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 3
+uwsgi socket 1 bound to UNIX address /liusc/trip_share/web/script/uwsgi.sock fd 4
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.3 (default, Apr 20 2018, 17:00:22)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+Python main interpreter initialized at 0x12707e0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 162224 bytes (158 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x12707e0 pid: 4860 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 4860)
+spawned uWSGI worker 1 (pid: 4862, cores: 1)
+[pid: 4862|app: 0|req: 1/1] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:04:54 2018] GET / => generated 4184 bytes in 237 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+抱歉，由于访问量增多，会有查询不到信息或信息不完整的情况，请多试几次或稍后再试!
+[pid: 4862|app: 0|req: 2/2] 182.50.115.131 () {58 vars in 1090 bytes} [Fri May 11 09:05:26 2018] POST /hello/ => generated 18 bytes in 146 msecs (HTTP/1.1 200) 3 headers in 108 bytes (1 switches on core 0)
+[pid: 4862|app: 0|req: 3/3] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:05:30 2018] GET / => generated 4184 bytes in 97 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+抱歉，由于访问量增多，会有查询不到信息或信息不完整的情况，请多试几次或稍后再试!
+[pid: 4862|app: 0|req: 4/4] 182.50.115.131 () {58 vars in 1090 bytes} [Fri May 11 09:05:49 2018] POST /hello/ => generated 18 bytes in 143 msecs (HTTP/1.1 200) 3 headers in 108 bytes (1 switches on core 0)
+[pid: 4862|app: 0|req: 5/5] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:11:58 2018] GET / => generated 4184 bytes in 112 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+['航段1', '2018-05-02', '00:10', '北京首都T3', '2018-05-02', '06:50', '亚的斯亚贝巴博乐T2', '埃塞俄比亚航空公司', 'ET605', '客票已使用']
+['航段2', '2018-05-02', '09:50', '亚的斯亚贝巴博乐T2', '2018-05-02', '12:35', '罗安达二月四日', '埃塞俄比亚航空公司', 'ET851', '客票已使用']
+['航段3', '2018-05-30', '13:40', '罗安达二月四日', '2018-05-30', '20:30', '亚的斯亚贝巴博乐T2', '埃塞俄比亚航空公司', 'ET850', '未使用']
+['航段4', '2018-05-31', '01:50', '亚的斯亚贝巴博乐T2', '2018-05-31', '17:20', '北京首都T3', '埃塞俄比亚航空公司', 'ET604', '未使用']
+{'0': ['航段1', '2018-05-02', '00:10', '北京首都T3', '2018-05-02', '06:50', '亚的斯亚贝巴博乐T2', '埃塞俄比亚航空公司', 'ET605', '客票已使用'], '1': ['航段2', '2018-05-02', '09:50', '亚的斯亚贝巴博乐T2', '2018-05-02', '12:35', '罗安达二月四日', '埃塞俄比亚航空公司', 'ET851', '客票已使用'], '2': ['航段3', '2018-05-30', '13:40', '罗安达二月四日', '2018-05-30', '20:30', '亚的斯亚贝巴博乐T2', '埃塞俄比亚航空公司', 'ET850', '未使用'], '3': ['航段4', '2018-05-31', '01:50', '亚的斯亚贝巴博乐T2', '2018-05-31', '17:20', '北京首都T3', '埃塞俄比亚航空公司', 'ET604', '未使用']}
+[pid: 4862|app: 0|req: 6/6] 182.50.115.131 () {58 vars in 1090 bytes} [Fri May 11 09:12:12 2018] POST /hello/ => generated 1261 bytes in 5455 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 4862|app: 0|req: 7/7] 182.50.115.131 () {48 vars in 858 bytes} [Fri May 11 09:13:17 2018] GET /hello/ => generated 27 bytes in 17 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 4862|app: 0|req: 8/8] 182.50.115.131 () {48 vars in 846 bytes} [Fri May 11 09:13:28 2018] GET / => generated 27 bytes in 168 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 4862|app: 0|req: 9/9] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:13:32 2018] GET / => generated 27 bytes in 107 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 4862|app: 0|req: 10/10] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:13:33 2018] GET / => generated 27 bytes in 119 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 4862|app: 0|req: 11/11] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:13:54 2018] GET / => generated 27 bytes in 111 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 4862|app: 0|req: 12/12] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:13:55 2018] GET / => generated 27 bytes in 124 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 4862|app: 0|req: 13/13] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:13:55 2018] GET / => generated 27 bytes in 110 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 4862|app: 0|req: 14/14] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:14:09 2018] GET / => generated 27 bytes in 117 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 4862|app: 0|req: 15/15] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:15:16 2018] GET / => generated 27 bytes in 112 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /liusc/trip_share/web/script
+closing all non-uwsgi socket fds > 2 (max_fd = 100001)...
+found fd 3 mapped to socket 0 (127.0.0.1:8000)
+found fd 4 mapped to socket 1 (/liusc/trip_share/web/script/uwsgi.sock)
+running /root/.pyenv/versions/3.6.3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Fri May 11 09:17:24 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 May 2018 14:41:18
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: VM_35_104_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /liusc/trip_share/web/script
+detected binary path: /root/.pyenv/versions/3.6.3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /liusc/trip_share/web
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 inherited INET address 127.0.0.1:8000 fd 3
+uwsgi socket 1 inherited UNIX address /liusc/trip_share/web/script/uwsgi.sock fd 4
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.3 (default, Apr 20 2018, 17:00:22)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+Python main interpreter initialized at 0x1128220
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 162224 bytes (158 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1128220 pid: 4860 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4860)
+spawned uWSGI worker 1 (pid: 5631, cores: 1)
+*** Starting uWSGI 2.0.17 (64bit) on [Fri May 11 17:17:55 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 May 2018 14:41:18
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: VM_35_104_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /liusc/trip_share/web/script
+writing pidfile to /liusc/trip_share/web/script/uwsgi.pid
+detected binary path: /root/.pyenv/versions/3.6.3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /liusc/trip_share/web
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 3
+uwsgi socket 1 bound to UNIX address /liusc/trip_share/web/script/uwsgi.sock fd 4
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.3 (default, Apr 20 2018, 17:00:22)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+Python main interpreter initialized at 0xfd97e0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 162224 bytes (158 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xfd97e0 pid: 5675 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 5675)
+spawned uWSGI worker 1 (pid: 5682, cores: 1)
+[pid: 5682|app: 0|req: 1/1] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:18:00 2018] GET / => generated 4184 bytes in 247 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 2/2] 182.50.115.131 () {50 vars in 877 bytes} [Fri May 11 09:18:07 2018] GET / => generated 4184 bytes in 95 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 3/3] 182.50.115.131 () {48 vars in 846 bytes} [Fri May 11 09:18:14 2018] GET / => generated 4184 bytes in 101 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 4/4] 182.50.115.131 () {48 vars in 846 bytes} [Fri May 11 09:21:25 2018] GET / => generated 4184 bytes in 101 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 5/5] 182.50.115.131 () {48 vars in 846 bytes} [Fri May 11 09:24:09 2018] GET / => generated 4184 bytes in 111 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 6/6] 124.207.120.242 () {46 vars in 778 bytes} [Fri May 11 09:46:48 2018] GET / => generated 4184 bytes in 117 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 7/7] 124.207.120.242 () {48 vars in 851 bytes} [Fri May 11 09:46:48 2018] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 8/8] 197.148.35.169 () {44 vars in 739 bytes} [Fri May 11 10:06:07 2018] GET / => generated 4184 bytes in 183 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 9/9] 124.207.120.242 () {48 vars in 866 bytes} [Fri May 11 10:14:51 2018] GET / => generated 4184 bytes in 115 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 10/10] 82.202.200.59 () {42 vars in 564 bytes} [Fri May 11 12:46:37 2018] GET /admin/assets/js/views/login.js => generated 104 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 11/11] 82.202.200.59 () {42 vars in 564 bytes} [Fri May 11 12:47:59 2018] GET /admin/assets/js/views/login.js => generated 104 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 12/12] 82.202.200.59 () {42 vars in 564 bytes} [Fri May 11 12:49:50 2018] GET /admin/assets/js/views/login.js => generated 104 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 13/13] 184.105.139.70 () {34 vars in 380 bytes} [Fri May 11 14:43:55 2018] GET / => generated 4184 bytes in 101 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 14/14] 139.59.116.107 () {42 vars in 524 bytes} [Fri May 11 22:25:50 2018] HEAD /index.php => generated 83 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 15/15] 139.59.116.107 () {42 vars in 550 bytes} [Fri May 11 22:25:51 2018] HEAD /admin/images/tango.png => generated 96 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 16/16] 139.162.113.204 () {38 vars in 442 bytes} [Sat May 12 04:52:58 2018] GET / => generated 4184 bytes in 100 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 17/17] 146.196.53.147 () {38 vars in 461 bytes} [Sat May 12 10:51:13 2018] GET /admin//config.php => generated 90 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 18/18] 149.28.123.208 () {34 vars in 391 bytes} [Sat May 12 11:11:52 2018] GET / => generated 4184 bytes in 96 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 19/19] 210.14.78.91 () {38 vars in 446 bytes} [Sat May 12 11:21:30 2018] GET / => generated 4184 bytes in 100 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 20/20] 184.105.247.196 () {34 vars in 381 bytes} [Sat May 12 14:34:12 2018] GET / => generated 4184 bytes in 100 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 21/21] 114.248.202.86 () {54 vars in 884 bytes} [Sun May 13 03:02:22 2018] POST /index.php/Api/Login/getsessionkey => generated 107 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 22/22] 107.170.254.178 () {40 vars in 467 bytes} [Sun May 13 05:18:48 2018] GET / => generated 4184 bytes in 342 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 23/23] 139.199.77.141 () {52 vars in 2607 bytes} [Sun May 13 11:28:05 2018] GET /otsmobile/app/mgs/mgw.htm?operationType=com.cars.otsmobile.queryLeftTicket&requestData=%5B%7B%22train_date%22%3A%2220180523%22%2C%22purpose_codes%22%3A%2200%22%2C%22from_station%22%3A%22PIJ%22%2C%22to_station%22%3A%22POJ%22%2C%22station_train_code%22%3A%22%22%2C%22start_time_begin%22%3A%220000%22%2C%22start_time_end%22%3A%222400%22%2C%22train_headers%22%3A%22QB%23%22%2C%22train_flag%22%3A%22%22%2C%22seat_type%22%3A%22%22%2C%22seatBack_Type%22%3A%22%22%2C%22ticket_num%22%3A%22%22%2C%22dfpStr%22%3A%22%22%2C%22secret_str%22%3A%22%E5%90%8E%E5%8F%B0%E5%BC%80%E5%85%B3%E8%8E%B7%E5%8F%96%E5%A4%B1%E8%B4%A5%EF%BC%8C%E6%88%96%E9%85%8D%E7%BD%AE%E5%BC%80%E5%85%B3%E4%B8%BAfalse.null%22%2C%22baseDTO%22%3A%7B%22check_code%22%3A%22e43b86817b38a66735196a52c546bd5d%22%2C%22device_no%22%3A%22d9056e870015defb%22%2C%22mobile_no%22%3A%22%22%2C%22os_type%22%3A%22a%22%2C%22time_str%22%3A%2220180513192805%22%2C%22user_name%22%3A%22%22%2C%22version_no%22%3A%223.0.1.01221000%22%7D%7D%5D&ts=1526210885805&sign= => generated 99 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 24/24] 106.75.50.37 () {34 vars in 382 bytes} [Sun May 13 12:34:26 2018] GET / => generated 4184 bytes in 111 msecs (HTTP/1.0 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 25/25] 184.105.139.69 () {34 vars in 380 bytes} [Sun May 13 12:57:34 2018] GET / => generated 4184 bytes in 111 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 26/26] 54.215.254.26 () {40 vars in 570 bytes} [Sun May 13 20:43:53 2018] GET / => generated 4184 bytes in 112 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 27/27] 60.191.20.210 () {32 vars in 353 bytes} [Sun May 13 21:05:08 2018] GET / => generated 4184 bytes in 112 msecs (HTTP/1.0 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 28/28] 5.188.9.100 () {34 vars in 377 bytes} [Mon May 14 05:03:22 2018] GET / => generated 4184 bytes in 120 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 29/29] 139.162.116.133 () {38 vars in 442 bytes} [Mon May 14 10:03:09 2018] GET / => generated 4184 bytes in 103 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 30/30] 149.28.123.208 () {34 vars in 467 bytes} [Mon May 14 11:29:37 2018] GET /api.php/Home/Activityforcedetail/index => generated 112 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 31/31] 180.88.136.84 () {48 vars in 844 bytes} [Mon May 14 13:12:59 2018] GET / => generated 4184 bytes in 113 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 32/32] 180.88.136.84 () {48 vars in 828 bytes} [Mon May 14 13:12:59 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 5682|app: 0|req: 33/33] 180.88.136.84 () {48 vars in 850 bytes} [Mon May 14 13:13:09 2018] GET /api => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)

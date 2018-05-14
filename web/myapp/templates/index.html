@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
     <title>机票验证界面</title>
     <style>
         html {
@@ -53,9 +53,9 @@
             border-radius: 2px;
             color: #444;
             font: 12px 'Microsoft YaHei', '微软雅黑';
-            padding: 8px 14px;
-            margin-bottom: 8px;
-            width: 310px;
+            padding: 18px 14px;
+            margin-top: 18px;
+            width: 335px;
         }
         
         .loginBox .loginInput:FOCUS {
@@ -90,9 +90,8 @@
         }
 
         .veri-img {
-            height: 30px;
-            width: 70px;
-            float: left;
+            height: 90px;
+
         }
     </style>
 </head>
@@ -100,14 +99,14 @@
     <div class="wrapper">
         <form action="/hello/" method="post">{% csrf_token %}
             <div class="loginBox">
-                <div class="loginBoxCenter" style="padding-left: 24px;height: 280px;">
-                    <p><label for="username">电子票号：</label></p>
+                <div class="loginBoxCenter" style="padding-left: 24px;height: 200px;">
+                    <!--p><label for="username">电子票号：</label></p>
                     <p><input type="text" id="text" name="text" class="loginInput" autofocus="autofocus" required="required" autocomplete="off" placeholder="请输入13位电子票号" value="" /></p>
                     <p><label for="password">姓名：</label></p>
                     <p><input type="text" id="password" name="password" class="loginInput" required="required" placeholder="LIU/SHENGCHAO" value="" /></p>
-                    <p><label for="capcha">验证码：</label></p>
-                    <p><input type="text" id="capcha" name="capcha" class="loginInput" required="required" placeholder="输入验证码" value="" style="width:150px;float:left" /></p>
+                    <p><label for="capcha">验证码：</label></p-->
                     <img class="veri-img" id="img_randCode_t" src="{{aaa}}" alt="看不清？点击换一张" style="cursor:pointer">
+                    <p><input type="text" id="capcha" name="capcha" class="loginInput" required="required" placeholder="输入验证码" value="" style="width:310px;float:left" /></p>
                     <!--http://www.travelsky.com/tsky/servlet/CallYanServlet?title=home-->
                 </div>
                 <div class="loginBoxButtons">

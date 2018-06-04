@@ -99,43 +99,32 @@ def airplane(date, flight_number):
 
 
 
-def db_save(num, name, first, date_departure, time_departure, departure, date_arrival, time_arrival, arrival, info_2_1,third, fourth):
-    db = pymysql.connect('101.236.24.202', 'root', 'oracle', 'trip', use_unicode=True, charset="utf8")
+def db_save(bbb):
+    db = pymysql.connect('140.143.54.34', 'htapi', 'jnNSHi2yBKsGSkZh', 'htapi', use_unicode=True, charset="utf8")
     cursor = db.cursor()
     # print('111111')
     # cursor.execute("CREATE TABLE IF NOT EXISTS user_trip_info")
-    sql_createtable = '''CREATE TABLE IF NOT EXISTS user_trip_info(
-            num long,
-            name char(40),
-            trip_num char(40),
-	    date_departure date,
-            time_departure char(40),
-	    departure char(40),
-	    date_arrival date,
-	    time_arrival char(40),
-	    arrival char(40),
-	    airplane_company char(40),
-	    flight_number char(40),
-	    status char(40)
+    # sql_createtable = '''CREATE TABLE IF NOT EXISTS user_trip_info(
+    #         num long,
+    #         name char(40),
+    #         trip_num char(40),
+	 #    date_departure date,
+    #         time_departure char(40),
+	 #    departure char(40),
+	 #    date_arrival date,
+	 #    time_arrival char(40),
+	 #    arrival char(40),
+	 #    airplane_company char(40),
+	 #    flight_number char(40),
+	 #    status char(40)
+    #
+    #                 );
+    #         '''
+    # cursor.execute(sql_createtable)  # 建表格
 
-                    );
-            '''
-    cursor.execute(sql_createtable)  # 建表格
+    sql_data = '''update `order` set detail = "{}" where id = '{}';'''.format(str(bbb), str(order_id))
 
-    sql_data = '''insert into user_trip_info
-                (num,name,trip_num,date_departure,time_departure,departure,date_arrival,time_arrival,arrival,airplane_company,flight_number,status)
-                values('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');'''.format(num, str(name),
-                                                                                               str(first),
-                                                                                               str(date_departure),
-                                                                                               str(time_departure),
-                                                                                               str(departure),
-                                                                                               str(date_arrival),
-                                                                                               str(time_arrival),
-                                                                                               str(arrival),
-                                                                                               str(info_2_1),
-                                                                                               str(third), str(fourth))
-
-    # print(sql_data)
+    print(sql_data)
     cursor.execute(sql_data)
     db.commit()
     cursor.close()
@@ -205,13 +194,14 @@ def hello(request):
                 flight_number = third
                 # print(first,second,third,fourth,date,flight_number)
                 airplane(date, flight_number)
-            bbb=every_all#所有的航段
+            bbb=every_all#所有的航段，格式[[],[],[],[],[]]
+            db_save(bbb=bbb)
             xvhao_list = []
             for i in range(0,len(bbb)):
                 xvhao_list.append(str(i))
 
 
-            bbb_new=dict(zip(xvhao_list,bbb))
+            bbb_new=dict(zip(xvhao_list,bbb))#字典
             print(bbb_new)
             return render(request , 'hello.html' ,{'bbb':bbb})
 
@@ -229,13 +219,14 @@ def hello(request):
         pass
 def api(request):
     global order_id,ticket_name,ticket_no
-    if request.method == 'POST':
-        order_id = request.POST['order_id']
-        ticket_no = request.POST['ticket_no']
-        ticket_name = request.POST['ticket_name']
+    if request.method == 'GET':
+        order_id = request.GET['id']
+        ticket_no = request.GET['no']
+        ticket_name = request.GET['na']
         print (order_id,ticket_no,ticket_name)
         return HttpResponse('OK')
-    elif request.method == 'GET':
+    elif request.method == 'POST':
         print ('404')
+        pass
 
 

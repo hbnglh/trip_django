@@ -1,124 +1,62 @@
 <!doctype html>
-<html>
-<head>
-    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>机票验证界面</title>
-    <style>
-        html {
-            background-color: #B5DEF2;
-        }
-        
-        .wrapper {
-            margin: 140px 0 140px auto;
-            width: 884px;
-        }
-        
-        .loginBox {
-            background-color: #F0F4F6;
-            /*上divcolor*/
-            border: 1px solid #BfD6E1;
-            border-radius: 5px;
-            color: #444;
-            font: 14px 'Microsoft YaHei', '微软雅黑';
-            margin: 0 auto;
-            width: 388px
-        }
-        
-        .loginBox .loginBoxCenter {
-            border-bottom: 1px solid #DDE0E8;
-            padding: 24px;
-        }
-        
-        .loginBox .loginBoxCenter p {
-            margin-bottom: 10px
-        }
-        
-        .loginBox .loginBoxButtons {
-            /*background-color: #F0F4F6;*/
-            /*下divcolor*/
-            border-top: 0px solid #FFF;
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-            line-height: 28px;
-            overflow: hidden;
-            padding: 20px 24px;
-            vertical-align: center;
-            filter: alpha(Opacity=80);
-            -moz-opacity: 0.5;
-            opacity: 0.5;
-        }
-        
-        .loginBox .loginInput {
-            border: 1px solid #D2D9dC;
-            border-radius: 2px;
-            color: #444;
-            font: 12px 'Microsoft YaHei', '微软雅黑';
-            padding: 18px 14px;
-            margin-top: 18px;
-            width: 335px;
-        }
-        
-        .loginBox .loginInput:FOCUS {
-            border: 1px solid #B7D4EA;
-            box-shadow: 0 0 8px #B7D4EA;
-        }
-        
-        .loginBox .loginBtn {
-            background-image: -moz-linear-gradient(to bottom, blue, #85CFEE);
-            border: 1px solid #98CCE7;
-            border-radius: 20px;
-            box-shadow: inset rgba(255, 255, 255, 0.6) 0 1px 1px, rgba(0, 0, 0, 0.1) 0 1px 1px;
-            color: #444;
-            /*登录*/
-            cursor: pointer;
-            float: right;
-            font: bold 13px Arial;
-            padding: 10px 50px;
-        }
-        
-        .loginBox .loginBtn:HOVER {
-            background-image: -moz-linear-gradient(to top, blue, #85CFEE);
-        }
-        
-        
-        .loginBox input#remember {
-            vertical-align: middle;
-        }
-        
-        .loginBox label[for="remember"] {
-            font: 11px Arial;
-        }
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        .veri-img {
-            height: 90px;
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<style>
+
+        .container-small {
+          max-width: 300px;
 
         }
     </style>
-</head>
-<body>
-    <div class="wrapper">
-        <form action="/hello/" method="post">{% csrf_token %}
-            <div class="loginBox">
-                <div class="loginBoxCenter" style="padding-left: 24px;height: 200px;">
-                    <!--p><label for="username">电子票号：</label></p>
-                    <p><input type="text" id="text" name="text" class="loginInput" autofocus="autofocus" required="required" autocomplete="off" placeholder="请输入13位电子票号" value="" /></p>
-                    <p><label for="password">姓名：</label></p>
-                    <p><input type="text" id="password" name="password" class="loginInput" required="required" placeholder="LIU/SHENGCHAO" value="" /></p>
-                    <p><label for="capcha">验证码：</label></p-->
-                    <img class="veri-img" id="img_randCode_t" src="{{aaa}}" alt="看不清？点击换一张" style="cursor:pointer">
-                    <p><input type="text" id="capcha" name="capcha" class="loginInput" required="required" placeholder="输入验证码" value="" style="width:310px;float:left" /></p>
-                    <!--http://www.travelsky.com/tsky/servlet/CallYanServlet?title=home-->
-                </div>
-                <div class="loginBoxButtons">
 
 
-                    <button class="loginBtn">验真</button>
-                    
-                </div>
-            </div>
-        </form>
-    </div>
-</body>
+    <title>机票验真</title>
+  </head>
+  <body>
 
 
+	  	<div class="container container-small">
+	  		<h3>机票验真</h3>
+	  		<form action="/hello/" method="post"> {% csrf_token %}
+
+				<!--隐藏内容-->
+				<!--订单id-->
+				<input type="hidden" name="order_id" value="{{order_id}}">
+				<!--姓名-->
+				<input type="hidden" name="ticket_num" value="{{ticket_no}}">
+				<!--机票号-->
+				<input type="hidden" name="ticket_name" value="{{ticket_name}}">
+
+
+			    <div class="form-group">
+	                <img class="img-thumbnail" id="img_randCode_t" src="{{aaa}}" alt="看不清？点击换一张" style="cursor:pointer;width: 300px">
+	            </div>
+	            <div class="form-group">    
+
+	                <p><input type="text" id="capcha" name="capcha" class="form-control" required="required" placeholder="输入验证码" value="" /></p>
+	            </div>       
+	            <div class="form-group">
+					
+					<button class="btn btn-lg btn-primary btn-block" type="submit">机票验真</button>
+	            </div>
+                <div class="alert alert-success">查询较慢，请稍等...</div>
+				<div class="progress progress-striped active">
+					<div class="progress-bar progress-bar-success" role="progressbar"
+						 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+						 style="width: 100%;">
+						<span class="sr-only">40% 完成</span>
+					</div>
+				</div>
+	    	</form>
+	    </div>
+
+
+    
+  </body>
 </html>
